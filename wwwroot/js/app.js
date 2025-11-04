@@ -194,7 +194,7 @@ function createMatchCard(match, index) {
     const card = document.createElement('div');
     card.className = 'match-card';
     
-    const player1IsWinner = match.winner.toLowerCase().includes(match.player1.toLowerCase());
+    const player1IsWinner = match.winner.toLowerCase() === match.player1.toLowerCase();
     
     card.innerHTML = `
         <div class="match-header">
