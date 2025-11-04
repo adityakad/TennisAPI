@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Pro - Live Rankings & Matches</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <div class="tennis-ball"></div>
+                <h1 class="main-title">Tennis Pro</h1>
+            </div>
+            <p class="tagline">Your Gateway to Professional Tennis Excellence</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="player-count">0</span>
+                    <span class="stat-label">Players</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="match-count">0</span>
+                    <span class="stat-label">Matches</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="nav-btn active" data-section="rankings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <polyline points="17 11 19 13 23 9"></polyline>
+                </svg>
+                <span>Rankings</span>
+            </button>
+            <button class="nav-btn" data-section="matches">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Matches</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Rankings Section -->
+        <section id="rankings-section" class="content-section active">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-icon">🏆</span>
+                    Player Rankings
+                </h2>
+                <p class="section-subtitle">Top tennis professionals ranked by their performance</p>
+            </div>
+            
+            <div class="loading-spinner" id="rankings-loading">
+                <div class="spinner"></div>
+                <p>Loading rankings...</p>
+            </div>
+            
+            <div id="rankings-container" class="cards-grid">
+                <!-- Rankings will be populated here -->
+            </div>
+        </section>
+
+        <!-- Matches Section -->
+        <section id="matches-section" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-icon">🎾</span>
+                    Recent Matches
+                </h2>
+                <p class="section-subtitle">Latest tennis match results and highlights</p>
+            </div>
+            
+            <div class="loading-spinner" id="matches-loading">
+                <div class="spinner"></div>
+                <p>Loading matches...</p>
+            </div>
+            
+            <div id="matches-container" class="matches-list">
+                <!-- Matches will be populated here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tennis Pro</h3>
+                <p>Your premier source for tennis rankings and match data</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#rankings-section">Rankings</a></li>
+                    <li><a href="#matches-section">Matches</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📱</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📸</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tennis Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
